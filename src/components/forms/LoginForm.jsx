@@ -2,8 +2,24 @@
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 const LoginForm = () => {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+  const submitLoginForm = () => {
+    toast.success("Login Successfull!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+    router.push(`/dashboard`);
+  };
   return (
     <>
       <form className="pt-[60px] flex flex-col items-start justify-start w-full md:w-auto px-3">
@@ -50,6 +66,7 @@ const LoginForm = () => {
         </div>
         <div className="pt-[28px]  items-center justify-center flex w-full ">
           <button
+            onClick={submitLoginForm}
             type="button"
             className="w-full md:w-[452px] py-4 bg-[#0F7AE2] rounded-[10px] pl-4 text-[#FFF] text-[20px] font-[600] uppercase hover:bg-[#4998ec] hover:transform duration-500"
           >
