@@ -131,7 +131,11 @@ const Customer = () => {
                     {data.map((customer, index) => (
                       <tr
                         key={index}
-                        className="bg-[#2D355C]  border-[2.5px]  border-[#101D35]   hover:bg-[#354183]  py-[22px] text-center"
+                        className={`${
+                          customer.status == 4
+                            ? " bg-[#2D355C] opacity-[0.2]"
+                            : " bg-[#2D355C] opacity-[1]"
+                        }  border-[2.5px]  border-[#101D35]   hover:bg-[#354183]  py-[22px] text-center`}
                       >
                         <td className="w-4 p-4">
                           <div className="flex items-center">
@@ -161,9 +165,28 @@ const Customer = () => {
                           {customer.creater_at}
                         </td>
                         <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                          <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase">
-                            Live
-                          </button>
+                          {customer.status == 1 && (
+                            <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase cursor-auto">
+                              Live
+                            </button>
+                          )}
+                          {customer.status == 2 && (
+                            <button className="py-[3px] px-[30px] bg-[#5C2947] bg-opacity-[57%] text-[#04DF94] text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                              DEAD
+                            </button>
+                          )}
+
+                          {customer.status == 3 && (
+                            <button className="py-[3px] px-[11px] bg-[#FFCD05] bg-opacity-[0.71] text-[#FFEFC3] text-[11px] font-[400] rounded-xl uppercase">
+                              NEEDS ATTENTION
+                            </button>
+                          )}
+
+                          {customer.status == 4 && (
+                            <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94]  text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                              live
+                            </button>
+                          )}
                         </td>
                         <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
                           {customer.php_balance}
@@ -231,9 +254,9 @@ const Customer = () => {
                   </tbody>
                 </table>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full gap-4 pt-[21px]">
+              <div className=" grid grid-cols-1 lg:grid-cols-2 items-start justify-between w-full gap-4 pt-[21px]">
                 <div>
-                  <ul className="flex items-center justify-center gap-4 md:gap-[25px] ">
+                  <ul className="flex items-center justify-center lg:justify-start gap-4 md:gap-[25px] ">
                     <li className="pr-[6px]  cursor-pointer">
                       <IoIosArrowBack className="text-[#7E84A3] h-6 w-6" />
                     </li>
@@ -266,7 +289,7 @@ const Customer = () => {
                   </ul>
                 </div>
                 <div>
-                  <ul className="flex items-center justify-center gap-[13px] ">
+                  <ul className="flex items-center justify-center lg:justify-end gap-[13px] ">
                     <li className=" text-[#4897E0] text-[16px] font-[400] cursor-pointer bg-[#2D355C]  rounded-md">
                       <MdInfoOutline className="text-[#4897E0] h-[30px] w-[30px] px-1 py-1" />
                     </li>
