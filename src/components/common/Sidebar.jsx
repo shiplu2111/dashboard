@@ -7,7 +7,7 @@ const Sidebar = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="bg-primary h-[100vh] w-[110px] relative">
+      <div className="bg-[#101D35] h-full min-h-[100vh] w-[110px] relative">
         <div className="flex items-center justify-center flex-col gap-1 ">
           <Link
             href="/dashboard/customers"

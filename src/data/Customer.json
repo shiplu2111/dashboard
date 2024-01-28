@@ -1,0 +1,84 @@
+{
+  "customer": [
+    {
+      "id": 3254789456781,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456782,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456783,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456784,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456785,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456786,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456787,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456788,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456789,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    },
+    {
+      "id": 3254789456790,
+      "username": "Jennifer Lopez",
+      "creater_at": "17 Jan 2024",
+      "status": 1,
+      "php_balance": "P30,897.25",
+      "usd_balance": "$30,976.76"
+    }
+  ]
+}
