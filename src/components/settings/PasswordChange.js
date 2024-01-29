@@ -4,9 +4,9 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 const PasswordChange = () => {
   return (
     <>
-      <div className="flex flex-col items-start  justify-sitems-start pt-[35px] px-11 ">
+      <div className="flex flex-col items-start  justify-sitems-start pt-[35px] ">
         <div className="w-full px-[39px] border bg-[#313B5E] flex flex-col">
-          <div className="flex items-center justify-start gap-[6.71px] pt-[31px]">
+          <div className="flex items-center justify-center md:justify-start gap-[6.71px] pt-[31px]">
             <div>
               <img src="/lock_reset_black_24dp.svg" alt="" />
             </div>

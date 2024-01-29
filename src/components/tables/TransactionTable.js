@@ -33,7 +33,10 @@ const TransactionTable = ({ data }) => {
             <th scope="col" className="px-6 py-3  font-[400]  text-[11px]">
               RECIPIENT BANK
             </th>
-            <th scope="col" className="px-6 py-3  font-[400]  text-[11px]">
+            <th
+              scope="col"
+              className="px-6 py-3  font-[400]  text-[11px] text-start"
+            >
               STATUS
             </th>
             <th scope="col" className="px-6 py-3  font-[400]  text-[11px]">
@@ -80,9 +83,9 @@ const TransactionTable = ({ data }) => {
               <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
                 American Bank
               </td>
-              <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
+              <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-start">
                 {transaction.status == 1 && (
-                  <div className="flex items-center justify-center gap-[5px]">
+                  <div className="flex items-start justify-start gap-[5px]">
                     <div className="p-[2px] bg-[#08B576] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse3.svg" alt="" />
                     </div>
@@ -93,7 +96,7 @@ const TransactionTable = ({ data }) => {
                 )}
 
                 {transaction.status == 2 && (
-                  <div className="flex items-center justify-center gap-[5px]">
+                  <div className="flex  items-start justify-start gap-[5px]">
                     {" "}
                     <div className="p-[2px] bg-[#FF8000] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse2.svg" alt="" />
@@ -104,7 +107,7 @@ const TransactionTable = ({ data }) => {
                   </div>
                 )}
                 {transaction.status == 3 && (
-                  <div className="flex items-center justify-center gap-[5px]">
+                  <div className="flex  items-start justify-start gap-[5px]">
                     <div className="p-[2px] bg-[#B50808] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse1.svg" alt="" />
                     </div>

@@ -8,7 +8,7 @@ export default function Settings() {
   return (
     <>
       <div className="w-full grid grid-cols-1 xl:grid-cols-5">
-        <div className="flex flex-col items-start justify-start  h-screen w-full bg-[#1A244B]">
+        <div className="hidden xl:flex flex-col items-start justify-start  h-screen w-full bg-[#1A244B]  ">
           <div className="px-[33px] pt-[27px] text-[20px] font-[400] text-[#FFF]">
             SETTINGS
           </div>
@@ -27,7 +27,10 @@ export default function Settings() {
             </div>
           </div>
         </div>
-        <div className="col-span-4 bg-[#222C52] w-full h-auto min-h-screen pb-11 ">
+        <div className="col-span-4 bg-[#222C52] w-full h-auto min-h-screen pb-11 px-4 md:px-8  xl:px-11">
+          <div className="flex md:hidden items-center justify-center px-[33px] pt-[27px] text-[20px] font-[400] text-[#FFF]">
+            SETTINGS
+          </div>
           <PersonalInfo />
           <PasswordChange />
           <ApiCode />

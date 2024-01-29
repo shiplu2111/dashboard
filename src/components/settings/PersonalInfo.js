@@ -3,9 +3,9 @@ import React from "react";
 const PersonalInfo = () => {
   return (
     <>
-      <div className="flex flex-col items-start  justify-sitems-start pt-[35px] px-11 ">
+      <div className="flex flex-col items-start  justify-sitems-start pt-[35px] ">
         <div className="w-full px-[39px] border bg-[#313B5E] flex flex-col">
-          <div className="flex items-start justify-start gap-[6.71px] pt-[31px]">
+          <div className="flex items-center justify-center md:justify-start gap-[6.71px] pt-[31px]">
             <div>
               <img src="/contacts_black_24dp.svg" alt="" />
             </div>
@@ -13,17 +13,22 @@ const PersonalInfo = () => {
               Personal Information
             </div>
           </div>
-          <div className="w-full grid grid-cols-3 items-start justify-start pt-[29px] pb-[20px] ">
+          <div className="w-full grid grid-cols-1 xl:grid-cols-3 items-start justify-start pt-[29px] pb-[20px] ">
             <div className="w-full flex items-center justify-center">
-              <div className=" bg-[#2196F3] bg-opacity-[0.23] rounded-full p-11">
-                <div>
-                  <img src="/account_circle_black_24dp.svg" alt="" />
+              <div className=" bg-[#2196F3] bg-opacity-[0.23] rounded-full p-11 relative">
+                <img src="/account_circle_black_24dp.svg" alt="" />
+                <div className="absolute bottom-[5px] right-3 p-[5px] bg-[#2196F3] rounded-full">
+                  <img
+                    src="/linked_camera_black_24dp.svg"
+                    className="h-[20.1px] w-[20.1px]"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
-            <div className="col-span-2 w-full ">
+            <div className="col-span-2 w-full  pt-5 md:pt-0">
               <div className="flex flex-col items-start justify-start w-full">
-                <div className="grid grid-cols-2 gap-[34.5px]  w-full">
+                <div className="md:grid flex flex-col md:grid-cols-2 gap-[34.5px]  w-full">
                   <div className="flex flex-col">
                     <label
                       htmlFor="fname"
