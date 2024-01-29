@@ -68,7 +68,7 @@ const LoginForm = () => {
           <button
             onClick={submitLoginForm}
             type="button"
-            className="w-full md:w-[452px] py-4 bg-[#0F7AE2] rounded-[10px] pl-4 text-[#FFF] text-[20px] font-[600] uppercase hover:bg-[#4998ec] hover:transform duration-500"
+            className="w-full md:w-[452px] py-4 bg-[#4897E0] rounded-[10px] pl-4 text-[#FFF] text-[18px] font-[600] uppercase hover:bg-[#439FF3]  shadow-2xl shadow-[#4897e066] focus:bg-[#3A7BB7]"
           >
             Login
           </button>

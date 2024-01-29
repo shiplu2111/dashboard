@@ -1,7 +1,8 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",

@@ -5,10 +5,18 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { MdInfoOutline } from "react-icons/md";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FiTrash } from "react-icons/fi";
+import CustomerData from "/src/data/Customer.json";
 
 import { IoIosSearch } from "react-icons/io";
 const Customer = () => {
-  const [openAction, setOpenAction] = useState(true);
+  const data = CustomerData.customer;
+  const [openAction, setOpenAction] = useState(false);
+  const [activeRaw, setActiveRaw] = useState(null);
+
+  const setClickAction = (index) => {
+    setOpenAction(!openAction);
+    setActiveRaw(index);
+  };
   return (
     <>
       <div className="flex flex-col flex-shrink-0">
@@ -81,7 +89,7 @@ const Customer = () => {
             </div>
             <div className="pt-5">
               <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-                <table className="w-full">
+                <table className="w-full h-full overflow-y-scroll ">
                   <thead className="text-[11px] font-[400] text-[#FFF] uppercase bg-[#131625]  border-2 border-[#101D35]  ">
                     <tr className="text-center ">
                       <th scope="col" className="px-4 py-5">
@@ -120,347 +128,155 @@ const Customer = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="bg-[#2D355C]  border-[2.5px]  border-[#101D35]   hover:bg-[#354183]  py-[22px] text-center">
-                      <td className="w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-all-search"
-                            type="checkbox"
-                            className="peer cursor-pointer appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-auto rounded-[5px] checked:rounded-full"
-                          />
-                          <label
-                            htmlFor="checkbox-table-search-1"
-                            className="sr-only"
-                          >
-                            checkbox
-                          </label>
-                        </div>
-                      </td>
-                      <td
-                        scope="row"
-                        className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
+                    {data.map((customer, index) => (
+                      <tr
+                        key={index}
+                        className={`${
+                          customer.status == 4
+                            ? " bg-[#2D355C] opacity-[0.2]"
+                            : " bg-[#2D355C] opacity-[1]"
+                        }  border-[2.5px]  border-[#101D35]   hover:bg-[#354183]  py-[22px] text-center`}
                       >
-                        3254789456781
-                      </td>
-                      <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
-                        Jennifer Lopez
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        17 Jan 2024
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                        <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase">
-                          Live
-                        </button>
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        P30,897.25
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        $30,976.76
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md ">
-                          Send Transfer
-                        </button>
-                      </td>
-                      <td className="flex items-center px-6 py-4 ">
-                        <div className=" text-[#FFFFFF] font-[700] dark:text-blue-500 cursor-pointer relative">
-                          <span onClick={() => setOpenAction(!openAction)}>
-                            ...
-                          </span>
-                          <div
-                            className={`${
-                              openAction ? "visible" : "invisible"
-                            } absolute z-40 left-1 top-[22px] rotate-45 h-3 w-3 bg-[#FFFFFF]`}
-                          ></div>
-                          <div
-                            className={`${
-                              openAction ? "visible" : "invisible"
-                            } absolute z-40  -left-9 top-[85px] -translate-x-1/2 -translate-y-1/2  w-32 bg-[#FFFFFF] flex  flex-col items-start justify-start rounded-xl `}
-                          >
-                            <div className="w-full   pt-5 flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#4897E0] gap-3">
-                              <div>
-                                <MdInfoOutline className="h-4 w-4" />
+                        <td className="w-4 p-4">
+                          <div className="flex items-center">
+                            <input
+                              id="checkbox-all-search"
+                              type="checkbox"
+                              className="peer cursor-pointer appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-auto rounded-[5px] checked:rounded-full"
+                            />
+                            <label
+                              htmlFor="checkbox-table-search-1"
+                              className="sr-only"
+                            >
+                              checkbox
+                            </label>
+                          </div>
+                        </td>
+                        <td
+                          scope="row"
+                          className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
+                        >
+                          {customer.id}
+                        </td>
+                        <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
+                          {customer.username}
+                        </td>
+                        <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
+                          {customer.creater_at}
+                        </td>
+                        <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
+                          {customer.status == 1 && (
+                            <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase cursor-auto">
+                              Live
+                            </button>
+                          )}
+                          {customer.status == 2 && (
+                            <button className="py-[3px] px-[30px] bg-[#5C2947] bg-opacity-[57%] text-[#04DF94] text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                              DEAD
+                            </button>
+                          )}
+
+                          {customer.status == 3 && (
+                            <button className="py-[3px] px-[11px] bg-[#FFCD05] bg-opacity-[0.71] text-[#FFEFC3] text-[11px] font-[400] rounded-xl uppercase">
+                              NEEDS ATTENTION
+                            </button>
+                          )}
+
+                          {customer.status == 4 && (
+                            <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94]  text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                              live
+                            </button>
+                          )}
+                        </td>
+                        <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
+                          {customer.php_balance}
+                        </td>
+                        <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
+                          {customer.usd_balance}
+                        </td>
+                        <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
+                          <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md hover:bg-[#121F38] focus:bg-[#3A7BB7]">
+                            Send Transfer
+                          </button>
+                        </td>
+                        <td className="flex items-center px-6 py-4 ">
+                          <div className=" text-[#FFFFFF] font-[700] dark:text-blue-500 cursor-pointer relative">
+                            <span onClick={() => setClickAction(index)}>
+                              ...
+                            </span>
+                            <div className="absolute  w-[143px] top-[23px] -left-[100px] h-28  bg-white rounded-xl "></div>
+                            <div
+                              className={`${
+                                openAction === true && index === activeRaw
+                                  ? ""
+                                  : "hidden"
+                              } absolute z-40 left-1 ${
+                                index > 7 ? "-top-[0px]" : "top-[22px]"
+                              } rotate-45 h-3 w-3 bg-[#FFFFFF]`}
+                            ></div>
+                            <div
+                              className={`${
+                                openAction === true && index === activeRaw
+                                  ? ""
+                                  : "hidden"
+                              } absolute  z-40  -left-9 ${
+                                index > 7 ? "-top-[52px]" : "top-[85px]"
+                              }  -translate-x-1/2 -translate-y-1/2  w-32 bg-[#FFFFFF] flex  flex-col items-start justify-start rounded-xl `}
+                            >
+                              <div className="w-full   py-2 flex items-center justify-start pl-5 mt-3  text-[11px] font-[700] text-[#4897E0] gap-3 hover:bg-[#4897E0] hover:bg-opacity-20">
+                                <div>
+                                  <MdInfoOutline className="h-4 w-4" />
+                                </div>
+                                <div className="text-[9px] font-[700] leading-[13.54px]">
+                                  Details
+                                </div>
                               </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Details
+                              <div className="w-full h-1/2   flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3 hover:bg-[#4897E0] hover:bg-opacity-20">
+                                <div>
+                                  <FaRegEyeSlash className="h-4 w-4" />
+                                </div>
+                                <div className="text-[9px] font-[700] leading-[13.54px]">
+                                  Set Inactive
+                                </div>
+                              </div>
+                              <div className="w-full h-1/2 hover:bg-[#4897E0] hover:bg-opacity-20  flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3  mb-3">
+                                <div>
+                                  <FiTrash className="h-4 w-4" />
+                                </div>
+                                <div className="text-[9px] font-[700] leading-[13.54px]">
+                                  Delete
+                                </div>
                               </div>
                             </div>
-                            <div className="w-full h-1/2   flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3">
-                              <div>
-                                <FaRegEyeSlash className="h-4 w-4" />
-                              </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Set Inactive
-                              </div>
-                            </div>
-                            <div className="w-full h-1/2   flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3  pb-4">
-                              <div>
-                                <FiTrash className="h-4 w-4" />
-                              </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Delete
+                            <div className="absolute hidden w-[143px] top-[23px] -left-[100px]  bg-white rounded-xl ">
+                              <div className="flex items-center justify-center flex-col">
+                                <div className="text-[11px] font-[700] text-[#222C52] px-6 pt-4">
+                                  Delete Customer
+                                </div>
+                                <div className="pt-[5.87px] text-[7px] font-[400] text-[#7B7C7E]">
+                                  Do you really want to <br /> delete this
+                                  customer
+                                </div>
+                                <div className="pt-[11.22px] flex items-center justify-between gap-[12.81px] pb-[19.7px]">
+                                  <button className="text-[#000000] font-[700] text-[7px] border-2 border-[#707070] px-[12.5px] py-[3px] rounded-sm hover:bg-red-600 hover:text-[#FFF] hover:border-red-600">
+                                    Delete
+                                  </button>
+                                  <button className="text-[#FFFFFF] bg-[#4897E0] hover:bg-[#439FF3] focus:bg-[#3A7BB7] font-[700] text-[7px]  px-[13.5px] py-[4px] rounded-sm">
+                                    Cancel
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr className="bg-[#2D355C]  border-[2.5px]  border-[#101D35]   hover:bg-[#354183]  py-[22px] text-center">
-                      <td className="w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-all-search"
-                            type="checkbox"
-                            className="peer cursor-pointer appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-auto rounded-[5px] checked:rounded-full"
-                          />
-                          <label
-                            htmlFor="checkbox-table-search-1"
-                            className="sr-only"
-                          >
-                            checkbox
-                          </label>
-                        </div>
-                      </td>
-                      <td
-                        scope="row"
-                        className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
-                      >
-                        3254789456781
-                      </td>
-                      <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
-                        Jennifer Lopez
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        17 Jan 2024
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                        <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase">
-                          Live
-                        </button>
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        P30,897.25
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        $30,976.76
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md ">
-                          Send Transfer
-                        </button>
-                      </td>
-                      <td className="flex items-center px-6 py-4 ">
-                        <div className=" text-[#FFFFFF] font-[700] dark:text-blue-500 cursor-pointer relative">
-                          <span onClick={() => setOpenAction(!openAction)}>
-                            ...
-                          </span>
-                          <div
-                            className={`${
-                              openAction ? "visible" : "invisible"
-                            } absolute z-40 left-1 top-[22px] rotate-45 h-3 w-3 bg-[#FFFFFF]`}
-                          ></div>
-                          <div
-                            className={`${
-                              openAction ? "visible" : "invisible"
-                            } absolute z-40  -left-9 top-[85px] -translate-x-1/2 -translate-y-1/2  w-32 bg-[#FFFFFF] flex  flex-col items-start justify-start rounded-xl `}
-                          >
-                            <div className="w-full   pt-5 flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#4897E0] gap-3">
-                              <div>
-                                <MdInfoOutline className="h-4 w-4" />
-                              </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Details
-                              </div>
-                            </div>
-                            <div className="w-full h-1/2   flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3">
-                              <div>
-                                <FaRegEyeSlash className="h-4 w-4" />
-                              </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Set Inactive
-                              </div>
-                            </div>
-                            <div className="w-full h-1/2   flex items-center justify-start pl-5 py-2 text-[11px] font-[700] text-[#222C52] gap-3  pb-4">
-                              <div>
-                                <FiTrash className="h-4 w-4" />
-                              </div>
-                              <div className="text-[9px] font-[700] leading-[13.54px]">
-                                Delete
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr className="bg-[#2D355C]  border-[2.5px]  border-[#101D35]   hover:bg-[#354183] text-center py-[22px] ">
-                      <td className="w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-all-search"
-                            type="checkbox"
-                            className="peer cursor-pointer appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-auto rounded-[5px] checked:rounded-full"
-                          />
-                          <label
-                            htmlFor="checkbox-table-search-1"
-                            className="sr-only"
-                          >
-                            checkbox
-                          </label>
-                        </div>
-                      </td>
-                      <td
-                        scope="row"
-                        className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
-                      >
-                        3254789456781
-                      </td>
-                      <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
-                        Jennifer Lopez
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        17 Jan 2024
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                        <button className="py-[3px] px-[30px] bg-[#5C2947] bg-opacity-[57%] text-[#04DF94] text-[11px] font-[400] rounded-xl uppercase">
-                          DEAD
-                        </button>
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        P30,897.25
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        $30,976.76
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md ">
-                          Send Transfer
-                        </button>
-                      </td>
-                      <td className="flex items-center px-6 py-4">
-                        <a
-                          href="#"
-                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >
-                          ...
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr className="bg-[#2D355C]  border-[2.5px]  border-[#101D35]   hover:bg-[#354183] text-center py-[22px] ">
-                      <td className="w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-all-search"
-                            type="checkbox"
-                            className="peer cursor-pointer appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-auto rounded-[5px] checked:rounded-full"
-                          />
-                          <label
-                            htmlFor="checkbox-table-search-1"
-                            className="sr-only"
-                          >
-                            checkbox
-                          </label>
-                        </div>
-                      </td>
-                      <td
-                        scope="row"
-                        className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
-                      >
-                        3254789456781
-                      </td>
-                      <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
-                        Jennifer Lopez
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        17 Jan 2024
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                        <button className="py-[3px] px-[11px] bg-[#FFCD05] bg-opacity-[0.71] text-[#FFEFC3] text-[11px] font-[400] rounded-xl uppercase">
-                          NEEDS ATTENTION
-                        </button>
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        P30,897.25
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        $30,976.76
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md ">
-                          Send Transfer
-                        </button>
-                      </td>
-                      <td className="flex items-center px-6 py-4">
-                        <a
-                          href="#"
-                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >
-                          ...
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr className="bg-[#2D355C] opacity-[0.2] border-[2.5px]  border-[#101D35]    text-center py-[22px] ">
-                      <td className="w-4 p-4">
-                        <div className="flex items-center">
-                          <input
-                            id="checkbox-all-search"
-                            type="checkbox"
-                            className="peer  appearance-none  relative h-4 w-4 bg-transparent  border-2 border-[#FFFFFF]  transition-all checked:appearance-none rounded-[5px] checked:rounded-full"
-                          />
-                          <label
-                            htmlFor="checkbox-table-search-1"
-                            className="sr-only"
-                          >
-                            checkbox
-                          </label>
-                        </div>
-                      </td>
-                      <td
-                        scope="row"
-                        className="px-1 py-4 text-[11px] font-[400] text-[#FFF]"
-                      >
-                        3254789456781
-                      </td>
-                      <td className="px-6 py-4 text-[11px] font-[700] text-[#FFF]">
-                        Jennifer Lopez
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        17 Jan 2024
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
-                        <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94]  text-[11px] font-[400] rounded-xl uppercase cursor-auto">
-                          live
-                        </button>
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        P30,897.25
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        $30,976.76
-                      </td>
-                      <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                        <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md  cursor-auto">
-                          Send Transfer
-                        </button>
-                      </td>
-                      <td className="flex items-center px-6 py-4">
-                        <a
-                          href="#"
-                          className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        >
-                          ...
-                        </a>
-                      </td>
-                    </tr>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full gap-4 pt-[21px]">
+              <div className=" grid grid-cols-1 lg:grid-cols-2 items-start justify-between w-full gap-4 pt-[21px]">
                 <div>
-                  <ul className="flex items-center justify-center gap-4 md:gap-[25px] ">
+                  <ul className="flex items-center justify-center lg:justify-start gap-4 md:gap-[25px] ">
                     <li className="pr-[6px]  cursor-pointer">
                       <IoIosArrowBack className="text-[#7E84A3] h-6 w-6" />
                     </li>
@@ -493,7 +309,7 @@ const Customer = () => {
                   </ul>
                 </div>
                 <div>
-                  <ul className="flex items-center justify-center gap-[13px] ">
+                  <ul className="flex items-center justify-center lg:justify-end gap-[13px] ">
                     <li className=" text-[#4897E0] text-[16px] font-[400] cursor-pointer bg-[#2D355C]  rounded-md">
                       <MdInfoOutline className="text-[#4897E0] h-[30px] w-[30px] px-1 py-1" />
                     </li>
