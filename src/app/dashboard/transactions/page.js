@@ -23,7 +23,7 @@ const Transactions = () => {
               TRANSACTIONS
             </div>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 pt-8  py-[35px]">
-              <div className="flex items-center justify-between bg-[#0B70B4] rounded-lg  px-[45.5px]">
+              <div className="flex items-center justify-between bg-[#0B70B4] rounded-lg px-5 lg:px-[45.5px]">
                 <div className="flex items-center justify-start py-[24.5px]  gap-[15.8px]">
                   <div className="px-3 py-3 bg-[#40D6FC] rounded-lg  border-2 border-[#707070]">
                     <img
@@ -41,7 +41,7 @@ const Transactions = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between bg-[#0B70B4] rounded-lg  px-[45.5px]">
+              <div className="flex items-center justify-between bg-[#1C7360] rounded-lg  px-5 lg:px-[45.5px]">
                 <div className="flex items-center justify-start py-[24.5px]  gap-[15.8px]">
                   <div className="px-3 py-3 bg-[#20A943] border-2 border-[#707070] rounded-lg">
                     <img
@@ -87,7 +87,7 @@ const Transactions = () => {
                 </div>
                 <div className="pt-5  ">
                   <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-                   <TransactionTable  data={data}/>
+                    <TransactionTable data={data} />
                   </div>
                   <div className="py-[21px]  flex items-start justify-start ">
                     <ul className="flex items-center justify-center lg:justify-start gap-4 md:gap-[25px] ">

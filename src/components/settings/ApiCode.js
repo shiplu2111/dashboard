@@ -19,7 +19,7 @@ const ApiCode = () => {
                 className="w-full px-[10px] pl-[18px] py-[14px]   bg-[#343C57] h-[43px] border-[.5px] border-[#AAAAAA] rounded-md leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue text-[#FFF] text-[14px] font-[400]"
                 value='# hello.py print/("Hello, World!".asd)'
               />
-              <div className="pt-5 md:pt-0 md:absolute md:right-[4.5px] md:top-1/2 md:-translate-y-1/2">
+              <div className="pt-5 md:pt-10 xl:pt-0 xl:absolute xl:right-[4.5px] xl:top-1/2 xl:-translate-y-1/2">
                 <div className="flex items-center justify-center gap-[44px]">
                   <span className="cursor-pointer">
                     <img src="/Untitled-1.png" alt="" />

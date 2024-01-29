@@ -26,7 +26,7 @@ const PersonalInfo = () => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2 w-full  pt-5 md:pt-0">
+            <div className="col-span-2 w-full  pt-5 xl:pt-0">
               <div className="flex flex-col items-start justify-start w-full">
                 <div className="md:grid flex flex-col md:grid-cols-2 gap-[34.5px]  w-full">
                   <div className="flex flex-col">

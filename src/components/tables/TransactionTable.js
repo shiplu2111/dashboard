@@ -85,7 +85,7 @@ const TransactionTable = ({ data }) => {
               </td>
               <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-start">
                 {transaction.status == 1 && (
-                  <div className="flex items-start justify-start gap-[5px]">
+                  <div className="flex items-center justify-start gap-[5px]">
                     <div className="p-[2px] bg-[#08B576] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse3.svg" alt="" />
                     </div>
@@ -96,8 +96,7 @@ const TransactionTable = ({ data }) => {
                 )}
 
                 {transaction.status == 2 && (
-                  <div className="flex  items-start justify-start gap-[5px]">
-                    {" "}
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-[5px]">
                     <div className="p-[2px] bg-[#FF8000] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse2.svg" alt="" />
                     </div>
@@ -107,7 +106,7 @@ const TransactionTable = ({ data }) => {
                   </div>
                 )}
                 {transaction.status == 3 && (
-                  <div className="flex  items-start justify-start gap-[5px]">
+                  <div className="flex  items-center justify-start gap-[5px]">
                     <div className="p-[2px] bg-[#B50808] bg-opacity-[0.34] rounded-full">
                       <img src="/Ellipse1.svg" alt="" />
                     </div>
