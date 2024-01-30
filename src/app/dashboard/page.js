@@ -29,7 +29,7 @@ export default function Dashboard() {
               Modals
             </div>
           </div>
-          <div className="flex items-center justify-between px-3 md:px-4 xl:px-8 pt-5 gap-5">
+          <div className="flex flex-col items-center justify-between px-3 md:px-4 xl:px-8 pt-5 gap-5">
             <button
               className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
               onClick={() => setShowLogoutModal(true)}
