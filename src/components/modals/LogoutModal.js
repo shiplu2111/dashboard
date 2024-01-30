@@ -29,7 +29,7 @@ const LogoutModal = ({ visible, onClose }) => {
         className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat] bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
         onClick={handleOnClose}
       >
-        <div className="flex flex-col items-center justify-center rounded-lg">
+        <div className="flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg">
           <div className="bg-[#1A244B] flex flex-col items-center justify-center rounded-t-lg pb-[43.21px] ">
             <div className="pt-[51px]">
               <MdLogout className="text-[#A52020] w-[73px] h-[67.109px]" />
