@@ -28,7 +28,7 @@ const CustomerInfo = ({ visible, onClose }) => {
     <>
       <div
         id="modal-bg"
-        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat] bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
+        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
         onClick={handleOnClose}
       >
         <div className="flex flex-col items-center justify-center rounded-lg  mx-2  md:mx-8 lg:mx-[120px] w-screen px-2 md:px-0">

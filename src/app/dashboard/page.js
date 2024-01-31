@@ -5,6 +5,8 @@ import CustomerInfo from "@/components/modals/CustomerInfo";
 import Authenticate from "@/components/modals/Authenticate";
 import Otp from "@/components/modals/Otp";
 import ChooseCard from "@/components/modals/ChooseCard";
+import OtpGenerator from "@/components/modals/OtpGenerator";
+import SuccessfulTransfer from "@/components/modals/SuccessfulTransfer";
 
 export default function Dashboard() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -12,6 +14,8 @@ export default function Dashboard() {
   const [showAuthenticateModal, setShowuthenticateModal] = useState(false);
   const [showOtpModal, setShowOtpModal] = useState(false);
   const [showChooseCardModal, setShowChooseCardModal] = useState(false);
+  const [showOtpGeneratorModal, setShowOtpGeneratorModal] = useState(false);
+  const [showTransferModal, setShowTransferModal] = useState(false);
 
   const handleOnClose = () => {
     setShowLogoutModal(false);
@@ -19,6 +23,8 @@ export default function Dashboard() {
     setShowuthenticateModal(false);
     setShowOtpModal(false);
     setShowChooseCardModal(false);
+    setShowOtpGeneratorModal(false);
+    setShowTransferModal(false);
   };
   return (
     <>
@@ -61,7 +67,20 @@ export default function Dashboard() {
               className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
               onClick={() => setShowChooseCardModal(true)}
             >
-              Choose Card Modal Modal
+              Choose Card Modal
+            </button>
+            <button
+              className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
+              onClick={() => setShowOtpGeneratorModal(true)}
+            >
+              Otp Generator Modal
+            </button>
+
+            <button
+              className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
+              onClick={() => setShowTransferModal(true)}
+            >
+              Transfer Success Modal
             </button>
 
             <LogoutModal onClose={handleOnClose} visible={showLogoutModal} />
@@ -75,6 +94,22 @@ export default function Dashboard() {
             />
             <Otp visible={showOtpModal} onClose={handleOnClose} />
             <ChooseCard visible={showChooseCardModal} onClose={handleOnClose} />
+            <OtpGenerator
+              visible={showOtpGeneratorModal}
+              onClose={handleOnClose}
+            />
+            <SuccessfulTransfer
+              visible={showTransferModal}
+              onClose={handleOnClose}
+            />
+
+            {/* <div className="badge-area-show">
+              <div className="bagde-flag-wrap">
+                <a href="#" className="bagde-flag rounded-tl-xl rounded-bl-md">
+                  Home
+                </a>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
