@@ -1,6 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 const Authenticate = ({ visible, onClose }) => {
+  const [formData, setFormData] = useState({
+    first: 7,
+    second: 4,
+    third: 6,
+    fourth: 5,
+    fifth: 8,
+    sixth: 2,
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
   const handleOnClose = (e) => {
     if (e.target.id === "modal-bg") onClose();
   };
@@ -31,42 +48,53 @@ const Authenticate = ({ visible, onClose }) => {
             <div className="flex  items-center justify-center">
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="7"
                 type="text"
-                id="first"
+                name="first"
+                value={formData.first}
+                onChange={handleInputChange}
                 maxlength="1"
               />
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="4"
                 type="text"
                 id="second"
+                name="second"
+                value={formData.second}
+                onChange={handleInputChange}
                 maxlength="1"
               />
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="6"
                 type="text"
                 id="third"
+                name="third"
+                value={formData.third}
+                onChange={handleInputChange}
                 maxlength="1"
               />
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="5"
+                name="fourth"
+                value={formData.fourth}
+                onChange={handleInputChange}
                 type="text"
                 id="fourth"
                 maxlength="1"
               />
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="8"
+                name="fifth"
+                value={formData.fifth}
+                onChange={handleInputChange}
                 type="text"
                 id="fifth"
                 maxlength="1"
               />
               <input
                 class="m-2 border h-[34px] w-[26px] text-center form-control rounded bg-transparent text-[15px] font-[700] text-[#FFFFFF] border-[#B5B5B5] focus:outline-none"
-                value="2"
+                name="sixth"
+                value={formData.sixth}
+                onChange={handleInputChange}
                 type="text"
                 id="sixth"
                 maxlength="1"
