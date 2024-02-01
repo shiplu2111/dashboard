@@ -7,6 +7,9 @@ import Otp from "@/components/modals/Otp";
 import ChooseCard from "@/components/modals/ChooseCard";
 import OtpGenerator from "@/components/modals/OtpGenerator";
 import SuccessfulTransfer from "@/components/modals/SuccessfulTransfer";
+import SendTransfer from "@/components/modals/SendTransfer";
+import SendTransferOtherBank from "@/components/modals/SendTransferOtherBank";
+import ChooseWallet from "@/components/modals/ChooseWallet";
 
 export default function Dashboard() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -16,6 +19,10 @@ export default function Dashboard() {
   const [showChooseCardModal, setShowChooseCardModal] = useState(false);
   const [showOtpGeneratorModal, setShowOtpGeneratorModal] = useState(false);
   const [showTransferModal, setShowTransferModal] = useState(false);
+  const [showSendTransferModal, setShowSendTransferModal] = useState(false);
+  const [showWalletModal, setShowWalletModal] = useState(false);
+  const [showSendTransferOtherBankModal, setShowSendTransferOtherBankModal] =
+    useState(false);
 
   const handleOnClose = () => {
     setShowLogoutModal(false);
@@ -25,6 +32,9 @@ export default function Dashboard() {
     setShowChooseCardModal(false);
     setShowOtpGeneratorModal(false);
     setShowTransferModal(false);
+    setShowSendTransferModal(false);
+    setShowSendTransferOtherBankModal(false);
+    setShowWalletModal(false);
   };
   return (
     <>
@@ -82,6 +92,26 @@ export default function Dashboard() {
             >
               Transfer Success Modal
             </button>
+            <button
+              className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
+              onClick={() => setShowSendTransferModal(true)}
+            >
+              Send Transfer To Own Bank Modal
+            </button>
+
+            <button
+              className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
+              onClick={() => setShowWalletModal(true)}
+            >
+              Choose REZULT Wallet
+            </button>
+
+            <button
+              className="text-[#FFF] text-[13px] font-[400] bg-red-500 px-8 py-2 rounded-md"
+              onClick={() => setShowSendTransferOtherBankModal(true)}
+            >
+              Send Transfer To Other Bank Modal
+            </button>
 
             <LogoutModal onClose={handleOnClose} visible={showLogoutModal} />
             <CustomerInfo
@@ -102,14 +132,15 @@ export default function Dashboard() {
               visible={showTransferModal}
               onClose={handleOnClose}
             />
-
-            {/* <div className="badge-area-show">
-              <div className="bagde-flag-wrap">
-                <a href="#" className="bagde-flag rounded-tl-xl rounded-bl-md">
-                  Home
-                </a>
-              </div>
-            </div> */}
+            <SendTransfer
+              visible={showSendTransferModal}
+              onClose={handleOnClose}
+            />
+            <ChooseWallet visible={showWalletModal} onClose={handleOnClose} />
+            <SendTransferOtherBank
+              visible={showSendTransferOtherBankModal}
+              onClose={handleOnClose}
+            />
           </div>
         </div>
       </div>

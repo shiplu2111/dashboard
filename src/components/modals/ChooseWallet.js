@@ -1,8 +1,7 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import { FaAddressCard } from "react-icons/fa";
-
-const ChooseCard = ({ visible, onClose }) => {
+const ChooseWallet = ({ visible, onClose }) => {
   const handleOnClose = (e) => {
     if (e.target.id === "modal-bg") onClose();
   };
@@ -21,11 +20,18 @@ const ChooseCard = ({ visible, onClose }) => {
               onClick={onClose}
             />
           </div>
-          <div className="flex items-center justify-center  text-[22px] font-[700] text-[#BFA1F9]">
-            Choose Card
+          <div className="flex items-center justify-center  text-[20px] font-[600] text-[#BFA1F9]">
+            CHOOSE REZULT WALLET
           </div>
-          <div className="flex flex-col items-center  justify-start pt-3 gap-2 max-h-[280px] overflow-y-scroll my-scroll pr-3 scroll-mr-0">
-            <div className="flex items-center justify-start gap-2 bg-[#2A429E] px-5 py-1 rounded-md w-full">
+          <div className="flex flex-col items-center  justify-start pt-3 gap-2 max-h-[280px] overflow-y-scroll my-scroll px-3 scroll-mr-0">
+            <div className="relative z-2 flex items-center justify-start gap-2 bg-[#2A429E] px-5 pt-3 pb-1 rounded-md w-full">
+              <div className="absolute  -top-1 bg-[#E46300] -left-2 z-[1000] rounded-tl-2xl ">
+                <span className="px-2 py-1 text-[10px] font-[500] text-[#FFFFFF]">
+                  Active{" "}
+                </span>
+              </div>
+              <div className="absolute top-1 shadow-inner shadow-[#E46300] bg-[#775840] h-6 w-2 rounded-l-full -left-2"></div>
+
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -62,7 +68,13 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full">
+              <div className="absolute  -top-1 bg-[#E46300] -left-2 z-[1000] rounded-tl-2xl ">
+                <span className="px-2 py-1 text-[10px] font-[500] text-[#FFFFFF]">
+                  Active{" "}
+                </span>
+              </div>
+              <div className="absolute top-1 shadow-inner shadow-[#E46300] bg-[#775840] h-6 w-2 rounded-l-full -left-2"></div>
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -227,4 +239,4 @@ const ChooseCard = ({ visible, onClose }) => {
   );
 };
 
-export default ChooseCard;
+export default ChooseWallet;
