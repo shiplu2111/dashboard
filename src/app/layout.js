@@ -1,8 +1,7 @@
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
-
+import { Toaster } from "react-hot-toast";
+import NextTopLoader from "nextjs-toploader";
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
@@ -18,8 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <NextTopLoader />
         {children}
-        <ToastContainer />
+        <Toaster position="bottom-center" reverseOrder={false} />
       </body>
     </html>
   );

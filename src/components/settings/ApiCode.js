@@ -25,7 +25,7 @@ const ApiCode = () => {
                     <img src="/Untitled-1.png" alt="" />
                   </span>
                   <span>
-                    <button className="text-[#FFF] text-[13px] font-[400] bg-[#2196F3] border border-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] px-[24px] py-[7px] rounded">
+                    <button className="text-[#FFF] text-[13px] font-[400] bg-[#2196F3] border border-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] px-[24px] py-[7px] rounded  shadow-2xl shadow-gray-900">
                       Generate New Code
                     </button>
                   </span>

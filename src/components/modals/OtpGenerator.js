@@ -40,10 +40,10 @@ const OtpGenerator = ({ visible, onClose }) => {
             </div>
           </div>
           <div className="pt-[26.5px] flex items-center justify-center w-full gap-[10px]">
-            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[5.5px] px-[20px] bg-[#0E946F] w-full rounded-md">
+            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[5.5px] px-[20px] bg-[#0E946F] w-full rounded-md  shadow-2xl shadow-gray-900">
               Generate OTP
             </button>
-            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[5.5px] px-[20px] bg-[#A24141] w-full rounded-md ">
+            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[5.5px] px-[20px] bg-[#A24141] w-full rounded-md  shadow-2xl shadow-gray-900">
               Deactivate
             </button>
           </div>

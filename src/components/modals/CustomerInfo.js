@@ -1,25 +1,14 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
+
 import { FaRegEyeSlash } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
 
 const CustomerInfo = ({ visible, onClose }) => {
   const router = useRouter();
-  const handleLogout = () => {
-    toast.success("Logout Successfull!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-    router.push("/login");
-  };
+
   const handleOnClose = (e) => {
     if (e.target.id === "modal-bg") onClose();
   };
@@ -150,10 +139,10 @@ const CustomerInfo = ({ visible, onClose }) => {
                 <div className="grid grid-cols-4 items-center justify-between gap-[27px] w-full pt-0 lg:pt-[22px] ">
                   <div className="invisible"></div>
                   <div className="col-span-4 lg:col-span-3 w-full flex items-center justify-center gap-[27px]">
-                    <button className="text-[#FFFFFF] text-[13px] font-[400] py-[6px] w-full bg-[#A470F3] rounded">
+                    <button className="text-[#FFFFFF] text-[13px] font-[400] py-[6px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900">
                       AUTHENTICATE MS
                     </button>
-                    <button className="text-[#FFFFFF] text-[13px] font-[400] py-[6px] w-full bg-[#43A875] rounded">
+                    <button className="text-[#FFFFFF] text-[13px] font-[400] py-[6px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900">
                       OTP GENERATOR
                     </button>
                   </div>
@@ -164,7 +153,7 @@ const CustomerInfo = ({ visible, onClose }) => {
           <div className="bg-[#101D35] flex flex-col gap-3 md:gap-0 md:flex-row items-center justify-between w-full pl-3 md:pl-12 pr-3 md:pr-[14px] py-[18px]">
             <div className="flex items-center justify-center md:justify-start gap-4 w-full">
               <p className="text-[#FFFFFF] text-[14px] font-[400]">Status:</p>
-              <button className="text-[#00FF43] text-[13px] font-[700] py-[4.5px] px-11 bg-[#476989] rounded-2xl tracking-[0.5px]">
+              <button className="text-[#00FF43] text-[13px] font-[700] py-[4.5px] px-11 bg-[#476989] rounded-2xl tracking-[0.5px]  shadow-2xl shadow-gray-900">
                 LIVE
               </button>
             </div>
@@ -186,7 +175,7 @@ const CustomerInfo = ({ visible, onClose }) => {
               </div>
 
               <div className="col-span-2 flex items-center justify-center ">
-                <button className="text-[#FFFFFF] text-[14px] font-[400] py-[8.5px]  lg:w-auto px-[54px] bg-[#2196F3] rounded ">
+                <button className="text-[#FFFFFF] text-[14px] font-[400] py-[8.5px]  lg:w-auto px-[54px] bg-[#2196F3] rounded  shadow-2xl shadow-gray-900">
                   Send Transfer
                 </button>
               </div>

@@ -4,10 +4,10 @@ import Link from "next/link";
 const Header = () => {
   return (
     <>
-      <div className="flex items-center justify-start gap-[60px] py-[20px] bg-[#101D35]  border-b-[2px] border-[#242A44]">
+      <div className="flex items-center justify-center md:justify-start gap-[60px] py-[20px] bg-[#101D35]  border-b-[2px] border-[#242A44]">
         <Link
           href="/dashboard"
-          className="cursor-pointer flex items-center justify-center pl-[43px]"
+          className="cursor-pointer hidden md:flex items-center justify-center pl-[43px]"
         >
           <img src="/logo.svg" alt="" />
         </Link>

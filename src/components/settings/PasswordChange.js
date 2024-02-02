@@ -72,10 +72,10 @@ const PasswordChange = () => {
             </div>
             <div className="flex flex-col pt-[28px]">
               <div className="flex flex-col md:flex-row items-center justify-end gap-[26px]">
-                <button className="px-16 py-2 bg-[#313B5E] border border-[#E4E4E4] rounded-md text-[13px] font-[400] text-[#FFF]">
+                <button className="px-16 py-2 bg-[#313B5E] border border-[#E4E4E4] rounded-md text-[13px] font-[400] text-[#FFF]  shadow-2xl shadow-gray-900">
                   Discard
                 </button>
-                <button className="px-10 py-2 bg-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] border border-[#707070] rounded-md text-[13px] font-[400] text-[#FFF]">
+                <button className="px-10 py-2 bg-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] border border-[#707070] rounded-md text-[13px] font-[400] text-[#FFF]  shadow-2xl shadow-gray-900">
                   Apply Changes
                 </button>
               </div>

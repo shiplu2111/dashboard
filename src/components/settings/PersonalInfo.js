@@ -3,7 +3,7 @@ import React from "react";
 const PersonalInfo = () => {
   return (
     <>
-      <div className="flex flex-col items-start  justify-sitems-start pt-[35px] ">
+      <div className="flex flex-col items-start  justify-start pt-[35px] ">
         <div className="w-full px-[39px] border bg-[#313B5E] flex flex-col">
           <div className="flex items-center justify-center md:justify-start gap-[6.71px] pt-[31px]">
             <div>
@@ -73,10 +73,10 @@ const PersonalInfo = () => {
                     />
                   </div>
                   <div className="col-span-2 flex flex-col md:flex-row items-center justify-end gap-[26px]">
-                    <button className="px-16 py-2 bg-[#313B5E] border border-[#E4E4E4] rounded-md text-[13px] font-[400] text-[#FFF]">
+                    <button className="px-16 py-2 bg-[#313B5E] border border-[#E4E4E4] rounded-md text-[13px] font-[400] text-[#FFF]  shadow-2xl shadow-gray-900">
                       Discard
                     </button>
-                    <button className="px-10 py-2 bg-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] border border-[#707070] rounded-md text-[13px] font-[400] text-[#FFF]">
+                    <button className="px-10 py-2 bg-[#2196F3] hover:bg-[#439FF3] focus:bg-[#3A7BB7] border border-[#707070] rounded-md text-[13px] font-[400] text-[#FFF]  shadow-2xl shadow-gray-900">
                       Apply Changes
                     </button>
                   </div>

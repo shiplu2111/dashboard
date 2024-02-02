@@ -1,5 +1,6 @@
 import { IoClose, IoInformationCircleOutline } from "react-icons/io5";
 import { IoMdRefresh } from "react-icons/io";
+import { FaAddressCard } from "react-icons/fa";
 
 const SendTransfer = ({ visible, onClose }) => {
   const handleOnClose = (e) => {
@@ -33,7 +34,7 @@ const SendTransfer = ({ visible, onClose }) => {
                 Send Transfer
               </div>
             </div>
-            <div className="bg-[#222C52] flex flex-col items-center justify-center  px-2 md:px-4  py-7">
+            <div className="bg-[#222C52] flex flex-col items-center justify-center  px-2 md:px-4  py-7 rounded-md">
               <div className="grid grid-cols-4 items-center justify-between gap-[12px] w-full">
                 <label className="text-[#2196F3] text-[12px] font-[400]">
                   Session Token:
@@ -64,10 +65,10 @@ const SendTransfer = ({ visible, onClose }) => {
               <div className="grid grid-cols-4 items-center justify-between gap-[27px] w-full pt-0 lg:pt-[16px] ">
                 <div className="invisible"></div>
                 <div className="col-span-4 lg:col-span-3 w-full flex items-center justify-center gap-[27px]">
-                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded">
+                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900">
                     AUTHENTICATE MS
                   </button>
-                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded">
+                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900">
                     OTP GENERATOR
                   </button>
                 </div>
@@ -77,7 +78,7 @@ const SendTransfer = ({ visible, onClose }) => {
               SET REZULT WALLET
             </div>
             <div className="flex items-center justify-center w-full">
-              <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[18px] px-[61.5px] bg-[#2A3665]  rounded-md w-full">
+              <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[18px] px-[61.5px] bg-[#2A3665]  rounded-md w-full  shadow-2xl shadow-gray-900">
                 Choose Wallet
               </button>
             </div>
@@ -91,7 +92,6 @@ const SendTransfer = ({ visible, onClose }) => {
                   type="radio"
                   name="radioOne"
                   className="hidden"
-                  checked
                 />
                 <label
                   htmlFor="radio2"
@@ -150,7 +150,7 @@ const SendTransfer = ({ visible, onClose }) => {
           <div className="w-full bg-[#1C3460] flex items-center justify-center py-[14px] rounded-b-lg">
             <button
               onClick={onClose}
-              className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md"
+              className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900"
             >
               Transfer Money
             </button>

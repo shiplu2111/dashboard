@@ -36,11 +36,11 @@ const Authenticate = ({ visible, onClose }) => {
               onClick={onClose}
             />
           </div>
-          <div className="flex items-center justify-center pt-[57px] text-[18px] md:text-[22px] font-[700] text-[#BFA1F9]">
+          <div className="flex items-center justify-center pt-[57px] text-[16px] md:text-[22px] font-[700] text-[#BFA1F9]">
             Authenticate Master Session
           </div>
           <div className="pt-4 md:pt-[42.44px] flex items-center justify-center w-full">
-            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[9.5px] px-[20px] bg-[#2B5362] w-full rounded-md">
+            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[9.5px] px-[20px] bg-[#2B5362] w-full rounded-md  shadow-2xl shadow-gray-900">
               Generate OTP Code
             </button>
           </div>
@@ -101,7 +101,7 @@ const Authenticate = ({ visible, onClose }) => {
               />
             </div>
             <div>
-              <button className="text-[#FFFFFF] text-[10px] font-[400] py-[10px] px-[25.5px] bg-[#13AE79]  rounded-md">
+              <button className="text-[#FFFFFF] text-[10px] font-[400] py-[10px] px-[25.5px] bg-[#13AE79]  rounded-md  shadow-2xl shadow-gray-900">
                 Verify Code
               </button>
             </div>

@@ -2,24 +2,33 @@
 import { FaRegEyeSlash, FaRegEye } from "react-icons/fa";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { useState } from "react";
-import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 const LoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const submitLoginForm = () => {
-    toast.success("Login Successfull!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     });
-    router.push(`/dashboard`);
   };
+  const submitLoginForm = (e) => {
+    e.preventDefault();
+    if (formData.username.trim() === "") {
+      toast.error("Username is required");
+    } else if (formData.password.trim() === "") {
+      toast.error("Password is required");
+    } else {
+      router.push(`/dashboard`);
+    }
+  };
+
   return (
     <>
       <form className="pt-[60px] flex flex-col items-start justify-start w-full md:w-auto px-3">
@@ -29,6 +38,9 @@ const LoginForm = () => {
           </label>
           <input
             type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
             placeholder="Enter your username"
             className="w-full  md:w-[452px] h-14 bg-[#242A44] rounded-[10px] pl-4 text-[#bb9797] text-[14px] font-[400]leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue-500"
           />
@@ -40,6 +52,9 @@ const LoginForm = () => {
           <div className="relative">
             <input
               type={showPassword ? "text" : "password"}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Enter your password"
               className="w-full px-1 md:w-[452px] h-14 bg-[#242A44] rounded-[10px] pl-4 text-[#FFF] text-[14px] font-[400] leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue-500 "
             />

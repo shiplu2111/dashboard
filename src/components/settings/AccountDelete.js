@@ -24,7 +24,7 @@ const AccountDelete = () => {
                 </p>
               </div>
               <div className="flex items-center justify-center">
-                <button className="text-[#FFF] text-[13px] font-[400] bg-[#313B5E] border border-[#707070] hover:bg-[#354169] focus:bg-[#36436d] px-[40px] py-[7px] rounded">
+                <button className="text-[#FFF] text-[13px] font-[400] bg-[#313B5E] border border-[#707070] hover:bg-[#354169] focus:bg-[#36436d] px-[40px] py-[7px] rounded  shadow-2xl shadow-gray-900">
                   Delete Account
                 </button>
               </div>

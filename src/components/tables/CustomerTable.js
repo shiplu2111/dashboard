@@ -104,24 +104,24 @@ const CustomerTable = () => {
               </td>
               <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-center">
                 {customer.status == 1 && (
-                  <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase cursor-auto">
+                  <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94] text-[11px] font-[700] rounded-xl uppercase cursor-auto  shadow-2xl shadow-gray-900">
                     Live
                   </button>
                 )}
                 {customer.status == 2 && (
-                  <button className="py-[3px] px-[30px] bg-[#5C2947] bg-opacity-[57%] text-[#04DF94] text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                  <button className="py-[3px] px-[30px] bg-[#5C2947] bg-opacity-[57%] text-[#04DF94] text-[11px] font-[400] rounded-xl uppercase cursor-auto  shadow-2xl shadow-gray-900">
                     DEAD
                   </button>
                 )}
 
                 {customer.status == 3 && (
-                  <button className="py-[3px] px-[11px] bg-[#FFCD05] bg-opacity-[0.71] text-[#FFEFC3] text-[11px] font-[400] rounded-xl uppercase">
+                  <button className="py-[3px] px-[11px] bg-[#FFCD05] bg-opacity-[0.71] text-[#FFEFC3] text-[11px] font-[400] rounded-xl uppercase  shadow-2xl shadow-gray-900">
                     NEEDS ATTENTION
                   </button>
                 )}
 
                 {customer.status == 4 && (
-                  <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94]  text-[11px] font-[400] rounded-xl uppercase cursor-auto">
+                  <button className="py-[5px] px-[25px] bg-[#476989] text-[#04DF94]  text-[11px] font-[400] rounded-xl uppercase cursor-auto  shadow-2xl shadow-gray-900">
                     live
                   </button>
                 )}
@@ -133,7 +133,7 @@ const CustomerTable = () => {
                 {customer.usd_balance}
               </td>
               <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF]">
-                <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md hover:bg-[#121F38] focus:bg-[#3A7BB7]">
+                <button className="py-[8px] px-[11px] bg-[#4897E0] text-[#FFFFFF] text-[11px] font-[700] rounded-md hover:bg-[#121F38] focus:bg-[#3A7BB7]  shadow-2xl shadow-gray-900">
                   Send Transfer
                 </button>
               </td>
@@ -204,12 +204,12 @@ const CustomerTable = () => {
                       <div className="pt-[11.22px] flex items-center justify-between gap-[12.81px] pb-[19.7px]">
                         <button
                           onClick={() => handleRemoveItem(customer.id)}
-                          className="text-[#000000] font-[700] text-[7px] border-2 border-[#707070] px-[12.5px] py-[3px] rounded-sm hover:bg-red-600 hover:text-[#FFF] hover:border-red-600"
+                          className="text-[#000000] font-[700] text-[7px] border-2 border-[#707070] px-[12.5px] py-[3px] rounded-sm hover:bg-red-600 hover:text-[#FFF] hover:border-red-600  shadow-2xl shadow-gray-900"
                         >
                           Delete
                         </button>
                         <button
-                          className="text-[#FFFFFF] bg-[#4897E0] hover:bg-[#439FF3] focus:bg-[#3A7BB7] font-[700] text-[7px]  px-[13.5px] py-[4px] rounded-sm"
+                          className="text-[#FFFFFF] bg-[#4897E0] hover:bg-[#439FF3] focus:bg-[#3A7BB7] font-[700] text-[7px]  px-[13.5px] py-[4px] rounded-sm  shadow-2xl shadow-gray-900"
                           onClick={() => setClickDelete(false)}
                         >
                           Cancel

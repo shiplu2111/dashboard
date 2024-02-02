@@ -1,5 +1,6 @@
 import { IoClose, IoInformationCircleOutline } from "react-icons/io5";
 import { IoMdRefresh } from "react-icons/io";
+import { FaAddressCard } from "react-icons/fa";
 
 const SendTransferOtherBank = ({ visible, onClose }) => {
   const handleOnClose = (e) => {
@@ -64,10 +65,10 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
               <div className="grid grid-cols-4 items-center justify-between gap-[27px] w-full pt-0 lg:pt-[16px] ">
                 <div className="invisible"></div>
                 <div className="col-span-4 lg:col-span-3 w-full flex items-center justify-center gap-[27px]">
-                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded">
+                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900">
                     AUTHENTICATE MS
                   </button>
-                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded">
+                  <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900">
                     OTP GENERATOR
                   </button>
                 </div>
@@ -79,18 +80,19 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
             <div className="flex items-center justify-center w-full">
               <div className="flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full">
                 <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
-                  <div className="w-[40px] h-[40px] rounded-full overflow-hidden border border-[#B5B5B5] bg-white">
-                    <img
-                      src="/card1.png"
-                      className="h-[38px] w-[38px] object-cover object-center"
-                      alt=""
-                    />
+                  <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
+                    <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                   </div>
                   <div className="flex flex-col items-start justify-start">
-                    <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
-                      Red Deer Bank
+                    <div className="flex justify-between gap-8">
+                      <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
+                        Red Deer Bank
+                      </div>
+                      <div className="text-[#2196F3] text-[16px] font-[600] md:hidden block">
+                        ₱45,000.00
+                      </div>
                     </div>
-                    <div className="flex items-start justify-start gap-6 pt-1">
+                    <div className="flex  items-start justify-start gap-6 pt-1">
                       <div className="flex flex-col items-start justify-center">
                         <div className="text-[#237CCD] text-[10px]  text-left">
                           Account ID:
@@ -110,7 +112,7 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
                     </div>
                   </div>
                 </div>
-                <div className="text-[#2196F3] text-[16px] font-[600]">
+                <div className="text-[#2196F3] text-[16px] font-[600] hidden md:block">
                   ₱45,000.00
                 </div>
               </div>
@@ -118,8 +120,8 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
             <div className="pt-4 pb-2 text-[#FFFFFF] text-[13px] font-[400] flex items-center justify-center">
               SET TYPE OF TRANSFER
             </div>
-            <div className="flex items-center justify-center w-full gap-3">
-              <div className="flex items-center mr-4 mb-4">
+            <div className="flex flex-col md:flex-row items-center md:items-center justify-center w-full gap-0 md:gap-3  ">
+              <div className="flex items-start justify-start mr-4 mb-4">
                 <input
                   id="radio2"
                   type="radio"
@@ -134,13 +136,12 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
                   Same Bank
                 </label>
               </div>
-              <div className="flex items-center mr-4 mb-4">
+              <div className="flex items-start justify-start mr-4 mb-4">
                 <input
                   id="radio1"
                   type="radio"
                   name="radioOne"
                   className="hidden"
-                  checked
                 />
                 <label
                   htmlFor="radio1"
@@ -206,7 +207,7 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
             </div>
           </div>
           <div className="w-full bg-[#1C3460] flex items-center justify-center py-[14px] rounded-b-lg">
-            <button className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md">
+            <button className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900">
               Transfer Money
             </button>
           </div>

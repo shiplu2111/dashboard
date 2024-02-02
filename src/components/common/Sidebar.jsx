@@ -1,17 +1,25 @@
 "use client";
+import { useState } from "react";
 import { FaUsers } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdOutlineLogout } from "react-icons/md";
+import LogoutModal from "@/components/modals/LogoutModal";
+
 const Sidebar = () => {
   const pathname = usePathname();
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const handleOnClose = () => {
+    setShowLogoutModal(false);
+  };
   return (
     <>
+      <LogoutModal onClose={handleOnClose} visible={showLogoutModal} />
       <div className="bg-[#101D35] h-full min-h-[100vh] w-[110px] relative">
         <div className="flex items-center justify-center flex-col gap-1 ">
           <Link
             href="/dashboard/customers"
-            className={`link ${
+            className={` ${
               pathname === "/dashboard/customers"
                 ? "border-l-[5px] border-[#0058FF]  bg-[#192754] text-[#2196F3]"
                 : "text-[#FFF]"
@@ -59,7 +67,10 @@ const Sidebar = () => {
               SETTINGS
             </div>
           </Link>
-          <div className="absolute bottom-[50px] flex flex-col items-center justify-center mt-[5.33px] py-4  w-full  cursor-pointer">
+          <div
+            className="absolute bottom-[50px] flex flex-col items-center justify-center mt-[5.33px] py-4  w-full  cursor-pointer"
+            onClick={() => setShowLogoutModal(true)}
+          >
             <div>
               <MdOutlineLogout className="h-6 w-6 text-[#FFF] " />
             </div>

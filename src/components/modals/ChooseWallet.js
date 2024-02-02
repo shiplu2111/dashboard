@@ -39,7 +39,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Credit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start  gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:
@@ -82,7 +82,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Debit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start  gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:
@@ -110,7 +110,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Debit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start  gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:
@@ -138,7 +138,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Credit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:
@@ -175,7 +175,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Debit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start  gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:
@@ -203,7 +203,7 @@ const ChooseWallet = ({ visible, onClose }) => {
                 <div className="text-[#FFFFFF] text-[14px] font-[600] text-left">
                   Credit Card
                 </div>
-                <div className="flex items-start justify-start gap-6">
+                <div className="flex items-start justify-start  gap-3  md:gap-6">
                   <div className="flex flex-col items-start justify-center">
                     <div className="text-[#237CCD] text-[10px]  text-left">
                       Card Number:

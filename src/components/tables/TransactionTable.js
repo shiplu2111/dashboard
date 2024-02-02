@@ -86,8 +86,12 @@ const TransactionTable = ({ data }) => {
               <td className="px-6 py-4  text-[11px] font-[400] text-[#FFF] text-start">
                 {transaction.status == 1 && (
                   <div className="flex items-center justify-start gap-[5px]">
-                    <div className="p-[2px] bg-[#08B576] bg-opacity-[0.34] rounded-full">
-                      <img src="/Ellipse3.svg" alt="" />
+                    <div className="p-[2px] bg-[#08B576] bg-opacity-[0.34] rounded-full ">
+                      <img
+                        src="/Ellipse3.svg"
+                        className="animate-ping"
+                        alt=""
+                      />
                     </div>
                     <div className="text-[11px] font-[400] text-[#16D594]">
                       Live

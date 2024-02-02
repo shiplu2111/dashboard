@@ -1,21 +1,10 @@
 import React from "react";
 import { MdLogout } from "react-icons/md";
 import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
 
 const LogoutModal = ({ visible, onClose }) => {
   const router = useRouter();
   const handleLogout = () => {
-    toast.success("Logout Successfull!", {
-      position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
     router.push("/login");
   };
   const handleOnClose = (e) => {
@@ -35,7 +24,7 @@ const LogoutModal = ({ visible, onClose }) => {
               <MdLogout className="text-[#A52020] w-[73px] h-[67.109px]" />
             </div>
             <div className="pt-[22.92px] px-10">
-              <p className="text-[16px] md:text-[18px] font-[700] text-[#FFF]">
+              <p className="text-[14px] md:text-[18px] font-[700] text-[#FFF]">
                 Are you sure you want to log out?
               </p>
             </div>
@@ -48,7 +37,7 @@ const LogoutModal = ({ visible, onClose }) => {
               <span className="text-[#FFF] text-[10px] font-[700]">Cancel</span>
             </div>
             <div
-              className="flex items-center justify-center py-[21.5px] w-full  cursor-pointer  hover:bg-[#24375a] hover:rounded-br-md"
+              className="flex items-center justify-center py-[21.5px] w-full  cursor-pointer  hover:bg-[#24375a] hover:rounded-br-md "
               onClick={handleLogout}
             >
               <span className="text-[#FFF] text-[10px] font-[700]">
