@@ -20,7 +20,7 @@ const CustomerInfo = ({ visible, onClose }) => {
         className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
         onClick={handleOnClose}
       >
-        <div className="flex flex-col items-center justify-center rounded-lg  mx-2  md:mx-8 lg:mx-[120px] w-screen px-2 md:px-0 pb-[90px] md:pb-0">
+        <div className="flex flex-col items-center justify-center rounded-lg  mx-2  md:mx-8 lg:mx-[120px] w-screen px-2 md:px-0 pb-[120px] pt-12 md:pt-0 md:pb-0">
           <div className="bg-[#101D35] flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between rounded-t-lg px-5 md:px-[30px] lg:px-12 w-full gap-0 md:gap-12 relative ">
             <div className="flex flex-col items-start justify-start ">
               <div className="text-[#1F89E1] text-[10px] font-[400] pt-2 lg:pt-[14px]">
