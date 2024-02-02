@@ -18,9 +18,7 @@ export default function Dashboard() {
             <div className="pt-5">
               <AllModals />
             </div>
-            <div className="pt-5">
-              <Chart />
-            </div>
+
             <div className="pt-5">
               <Buttons />
             </div>
