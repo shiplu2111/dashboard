@@ -41,7 +41,7 @@ const AllModals = () => {
           Modals
         </div>
       </div>
-      <div className="grid grid-cols-5  items-center justify-between px-3 md:px-4 xl:px-8 pt-5 gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  items-center justify-between px-3 md:px-4 xl:px-8 pt-5 gap-5 ">
         <button
           className="inline-block rounded bg-[#0883CF] px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
           onClick={() => setShowLogoutModal(true)}
