@@ -11,10 +11,10 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
     <>
       <div
         id="modal-bg"
-        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
+        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center overflow-y-auto h-auto "
         onClick={handleOnClose}
       >
-        <div className="z-30 flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg bg-[#1A244B] pt-8  sm:pt-[206px] md:pt-[246px]  relative max-h-[95vh]  outline-none overflow-x-hidden overscroll-y-none ">
+        <div className="z-30 flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg bg-[#1A244B] pt-[150px]  sm:pt-[206px] md:pt-[246px]  relative max-h-[95vh]  outline-none overflow-x-hidden overscroll-y-none pb-[90px] md:pb-0">
           <div className="absolute top-[25px] right-[22px]">
             <IoClose
               className="size-[23.7px] text-[#7D6C6C] cursor-pointer"
@@ -29,12 +29,12 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
             />
           </div>
           <div className="flex flex-col items-center justify-center w-full px-4 md:px-10 pb-3 pt-16">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center pb-6 md:pb-0">
               <div className="flex items-center justify-center  text-[22px] font-[700] text-[#2196F3]">
                 Send Transfer
               </div>
             </div>
-            <div className="bg-[#222C52] flex flex-col items-center justify-center  px-2 md:px-4  py-7">
+            <div className="bg-[#222C52] flex flex-col items-center justify-center   px-2 md:px-4  py-7">
               <div className="grid grid-cols-4 items-center justify-between gap-[12px] w-full">
                 <label className="text-[#2196F3] text-[12px] font-[400]">
                   Session Token:

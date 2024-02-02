@@ -14,7 +14,7 @@ const SendTransfer = ({ visible, onClose }) => {
         className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
         onClick={handleOnClose}
       >
-        <div className="z-30 flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg bg-[#1A244B] pt-8 md:pt-[46px]  relative max-h-[95vh]  outline-none overflow-x-hidden overscroll-y-none">
+        <div className="z-30 flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg bg-[#1A244B] pt-8 md:pt-[46px]  relative max-h-[95vh]  outline-none overflow-x-hidden overscroll-y-none pb-[90px] md:pb-0">
           <div className="absolute top-[25px] right-[22px]">
             <IoClose
               className="size-[23.7px] text-[#7D6C6C] cursor-pointer"
@@ -28,8 +28,8 @@ const SendTransfer = ({ visible, onClose }) => {
               onClick={onClose}
             />
           </div>
-          <div className="flex flex-col items-center justify-center w-full px-4 md:px-10 pb-3 pt-16">
-            <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full px-4 md:px-10 pb-3 pt-8 md:pt-16">
+            <div className="flex items-center justify-center  pb-6 md:pb-0">
               <div className="flex items-center justify-center  text-[22px] font-[700] text-[#2196F3]">
                 Send Transfer
               </div>
