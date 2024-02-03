@@ -26,7 +26,7 @@ const Authenticate = ({ visible, onClose }) => {
     <>
       <div
         id="modal-bg"
-        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
+        className="fixed inset-0 bg-[#020308]  z-[1000] bg-cover bg-no-repeat bg-opacity-90 backdrop:blur-sm flex items-center justify-center"
         onClick={handleOnClose}
       >
         <div className="flex flex-col items-center justify-center rounded-lg bg-[#1A244B] mx-4 md:mx-0  px-[56.5px] relative pb-10 md:pb-[61px]">

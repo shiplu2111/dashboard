@@ -11,7 +11,7 @@ const ChooseCard = ({ visible, onClose }) => {
     <>
       <div
         id="modal-bg"
-        className="fixed inset-0 bg-[url('/Session1.png')] bg-cover bg-no-repeat bg-opacity-50 backdrop:blur-sm flex items-center justify-center"
+        className="fixed inset-0 bg-[#020308]  z-[1000] bg-cover bg-no-repeat bg-opacity-90 backdrop:blur-md flex items-center justify-center "
         onClick={handleOnClose}
       >
         <div className="flex flex-col items-center justify-center mx-2 md:mx-0 rounded-lg bg-[#1A244B] px-2 md:px-[74px] py-8 md:py-[55px] relative">

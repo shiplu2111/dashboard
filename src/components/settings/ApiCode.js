@@ -20,7 +20,7 @@ const ApiCode = () => {
                 value='# hello.py print/("Hello, World!".asd)'
               />
               <div className="pt-5 md:pt-10 xl:pt-0 xl:absolute xl:right-[4.5px] xl:top-1/2 xl:-translate-y-1/2">
-                <div className="flex items-center justify-center gap-[44px]">
+                <div className="flex items-center justify-center gap-[20px] md:gap-2">
                   <span className="cursor-pointer">
                     <img src="/Untitled-1.png" alt="" />
                   </span>
