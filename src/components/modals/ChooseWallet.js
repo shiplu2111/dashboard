@@ -24,7 +24,7 @@ const ChooseWallet = ({ visible, onClose }) => {
             CHOOSE REZULT WALLET
           </div>
           <div className="flex flex-col items-center  justify-start  gap-2 max-h-[280px] overflow-y-scroll my-scroll px-3 scroll-mr-0">
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A429E] bg-opacity-50 px-3 py-1 rounded-md w-full  cursor-pointer">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A429E] bg-opacity-50 px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="absolute  -top-1 bg-[#E46300] -left-2 z-[1000] rounded-tl-2xl ">
                 <span className="px-2 py-1 text-[10px] font-[500] text-[#FFFFFF]">
                   Active
@@ -69,8 +69,8 @@ const ChooseWallet = ({ visible, onClose }) => {
               </div>
             </div>
 
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -107,8 +107,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -145,8 +145,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -183,8 +183,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -221,8 +221,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -259,8 +259,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>
@@ -297,8 +297,8 @@ const ChooseWallet = ({ visible, onClose }) => {
                 ₱45,000.00
               </div>
             </div>
-            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer">
-              <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+            <div className="relative flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
+              <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full">
                 <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                   <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                 </div>

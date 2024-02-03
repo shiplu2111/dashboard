@@ -37,7 +37,7 @@ const SuccessfulTransfer = ({ visible, onClose }) => {
           <div className="w-full bg-[#1C3460] flex items-center justify-center py-[14px] rounded-b-lg">
             <button
               onClick={onClose}
-              className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[78px] bg-transparent border border-[#868686] rounded-md  shadow-2xl shadow-gray-900"
+              className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[78px] bg-transparent border border-[#868686] rounded-md  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]"
             >
               Close
             </button>

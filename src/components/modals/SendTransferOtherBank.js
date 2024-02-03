@@ -66,10 +66,10 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
                 <div className="grid grid-cols-4 items-center justify-between gap-[27px] w-full pt-0 lg:pt-[16px] ">
                   <div className="invisible"></div>
                   <div className="col-span-4 lg:col-span-3 w-full flex items-center justify-center gap-[27px]">
-                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900">
+                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
                       AUTHENTICATE MS
                     </button>
-                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900">
+                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
                       OTP GENERATOR
                     </button>
                   </div>
@@ -79,8 +79,8 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
                 SET REZULT WALLET
               </div>
               <div className="flex items-center justify-center w-full">
-                <div className="flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full">
-                  <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full  cursor-pointer">
+                <div className="flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full hover:bg-[#435086] hover:shadow-sm hover:shadow-[#E46300]">
+                  <div className="flex items-center justify-start gap-2  py-1 rounded-md w-full  cursor-pointer ">
                     <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                       <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                     </div>
@@ -208,7 +208,7 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
               </div>
             </div>
             <div className="w-full bg-[#1C3460] flex items-center justify-center py-[14px] rounded-b-lg">
-              <button className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900">
+              <button className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900 hover:bg-blue-600 hover:shadow-sm hover:shadow-[#E46300]">
                 Transfer Money
               </button>
             </div>

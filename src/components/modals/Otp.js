@@ -24,12 +24,12 @@ const Otp = ({ visible, onClose }) => {
             OTP Generator
           </div>
           <div className="flex items-center justify-center pt-[38px] ">
-            <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[23.5px] px-[82.5px] bg-[#2A3665]  rounded-md  shadow-2xl shadow-gray-900">
+            <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[23.5px] px-[82.5px] bg-[#2A3665] hover:bg-[#354585]  rounded-md  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
               Choose Wallet
             </button>
           </div>
           <div className="pt-[32.35px] flex items-center justify-center w-full">
-            <button className="text-[#FFFFFF] text-[11px]  font-[400] py-[10px] w-full bg-[#0E946F]  rounded-md  shadow-2xl shadow-gray-900">
+            <button className="text-[#FFFFFF] text-[11px]  font-[400] py-[10px] w-full bg-[#0E946F]  rounded-md  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
               ACTIVATE
             </button>
           </div>

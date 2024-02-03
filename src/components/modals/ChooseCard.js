@@ -25,7 +25,7 @@ const ChooseCard = ({ visible, onClose }) => {
             Choose Card
           </div>
           <div className="flex flex-col items-center  justify-start  gap-2 max-h-[280px] overflow-y-scroll my-scroll pr-3 scroll-mr-0">
-            <div className="flex items-center justify-start gap-2 bg-[#2A429E] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A429E] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -62,7 +62,7 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -90,7 +90,7 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -118,7 +118,7 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -155,7 +155,7 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>
@@ -183,7 +183,7 @@ const ChooseCard = ({ visible, onClose }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer">
+            <div className="flex items-center justify-start gap-2 bg-[#2A3665] px-5 py-1 rounded-md w-full  cursor-pointer hover:bg-[#2A429E] hover:shadow-sm hover:shadow-[#E46300]">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                 <FaAddressCard className=" object-fill text-[#e4e5ec]" />
               </div>

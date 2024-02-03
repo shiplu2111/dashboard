@@ -66,10 +66,10 @@ const SendTransfer = ({ visible, onClose }) => {
                 <div className="grid grid-cols-4 items-center justify-between gap-[27px] w-full pt-0 lg:pt-[16px] ">
                   <div className="invisible"></div>
                   <div className="col-span-4 lg:col-span-3 w-full flex items-center justify-center gap-[27px]">
-                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900">
+                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#A470F3] rounded  shadow-2xl shadow-gray-900 hover:shadow-sm hover:shadow-[#E46300] ">
                       AUTHENTICATE MS
                     </button>
-                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900">
+                    <button className="text-[#FFFFFF] text-[12px] font-[400] py-[5px] w-full bg-[#43A875] rounded  shadow-2xl shadow-gray-900 hover:shadow-sm hover:shadow-[#E46300]">
                       OTP GENERATOR
                     </button>
                   </div>
@@ -78,8 +78,8 @@ const SendTransfer = ({ visible, onClose }) => {
               <div className="py-4 text-[#FFFFFF] text-[13px] font-[400] flex items-center justify-center">
                 SET REZULT WALLET
               </div>
-              <div className="flex items-center justify-center w-full cursor-pointer">
-                <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[18px] px-[61.5px] bg-[#2A3665]  rounded-md w-full  shadow-2xl shadow-gray-900">
+              <div className="flex items-center justify-center w-full cursor-pointer ">
+                <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[18px] px-[61.5px] bg-[#2A3665]  rounded-md w-full  shadow-2xl shadow-gray-900 hover:bg-[#435086] hover:shadow-sm hover:shadow-[#E46300]">
                   Choose Wallet
                 </button>
               </div>
@@ -151,7 +151,7 @@ const SendTransfer = ({ visible, onClose }) => {
             <div className="w-full bg-[#1C3460] flex items-center justify-center py-[14px] rounded-b-lg">
               <button
                 onClick={onClose}
-                className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900"
+                className="text-[#FFFFFF] text-[12px] font-[700] py-[7.5px] px-[60px] bg-blue-500  rounded-md  shadow-2xl shadow-gray-900 hover:bg-blue-600 hover:shadow-sm hover:shadow-[#E46300]"
               >
                 Transfer Money
               </button>

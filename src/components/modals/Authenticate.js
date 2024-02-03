@@ -40,7 +40,7 @@ const Authenticate = ({ visible, onClose }) => {
             Authenticate Master Session
           </div>
           <div className="pt-4 md:pt-[42.44px] flex items-center justify-center w-full">
-            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[9.5px] px-[20px] bg-[#2B5362] w-full rounded-md  shadow-2xl shadow-gray-900">
+            <button className="text-[#FFFFFF] text-[10px] font-[400] py-[9.5px] px-[20px] bg-[#2B5362] w-full rounded-md  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
               Generate OTP Code
             </button>
           </div>
@@ -101,7 +101,7 @@ const Authenticate = ({ visible, onClose }) => {
               />
             </div>
             <div>
-              <button className="text-[#FFFFFF] text-[10px] font-[400] py-[10px] px-[25.5px] bg-[#13AE79]  rounded-md  shadow-2xl shadow-gray-900">
+              <button className="text-[#FFFFFF] text-[10px] font-[400] py-[10px] px-[25.5px] bg-[#13AE79]  rounded-md  shadow-2xl shadow-gray-900  hover:shadow-sm hover:shadow-[#E46300]">
                 Verify Code
               </button>
             </div>
