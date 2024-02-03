@@ -80,7 +80,7 @@ const SendTransferOtherBank = ({ visible, onClose }) => {
               </div>
               <div className="flex items-center justify-center w-full">
                 <div className="flex items-center justify-between gap-2 bg-[#2A3665] px-3 py-1 rounded-md w-full">
-                  <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full">
+                  <div className="flex items-center justify-start gap-2 bg-[#2A3665] py-1 rounded-md w-full  cursor-pointer">
                     <div className="w-[40px] h-[40px] rounded-full overflow-hidden border-2 border-[#B5B5B5] bg-[#1A244B] flex items-center justify-center">
                       <FaAddressCard className=" object-fill text-[#e4e5ec]" />
                     </div>

@@ -78,7 +78,7 @@ const SendTransfer = ({ visible, onClose }) => {
               <div className="py-4 text-[#FFFFFF] text-[13px] font-[400] flex items-center justify-center">
                 SET REZULT WALLET
               </div>
-              <div className="flex items-center justify-center w-full">
+              <div className="flex items-center justify-center w-full cursor-pointer">
                 <button className="text-[#FFFFFF] text-[12px] border border-[#FFFFFF] font-[400] py-[18px] px-[61.5px] bg-[#2A3665]  rounded-md w-full  shadow-2xl shadow-gray-900">
                   Choose Wallet
                 </button>
