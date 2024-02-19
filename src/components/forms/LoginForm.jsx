@@ -31,7 +31,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form className="pt-[60px] flex flex-col items-start justify-start w-full md:w-auto px-3">
+      <form className="pt-[30px] flex flex-col items-start justify-start w-full md:w-auto px-3">
         <div className="flex flex-col w-full">
           <label className=" pb-[11.5px] uppercase text-[#FFF] text-[14px] font-[400]">
             USERNAME
