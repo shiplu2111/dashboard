@@ -9,10 +9,7 @@ const Login = () => {
           <div className="text-[#FFF] pt-3 text-[14px] font-[400]">
             Welcome to Customers Transaction Service
           </div>
-          <div className="text-[#FFF] pt-1 text-[12px] font-[400]">
-            For Any Query Contact: Email: shiplu2111@gmail.com | Whatsapp:
-            +8801711-002919
-          </div>
+          
           <div className="pt-[20px] w-full md:w-[456.625px] h-[1px] flex-shrink-0 stroke-1 stroke-[#707070] opacity-[0.55]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
